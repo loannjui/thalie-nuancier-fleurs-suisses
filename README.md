@@ -2,15 +2,21 @@
 
 ## But
 
-Ce projet est un projet exploratoire permettant de découvrir la biodiversité suisse à travers les couleurs. Les fleurs changent selon l’altitude et le moment de l’année. Notre but principal était traduire les données en paysage visuel et de transformer des données scientifiques en une expérience immersive.
+Ce projet est un projet exploratoire permettant de découvrir la biodiversité suisse à travers les couleurs. Les fleurs changent selon l’altitude et le moment de l’année. Notre but principal était traduire les données en paysage visuel et de transformer des données scientifiques en une expérience immersive et artistique.
 
 ## Description
 
 Ce site est une visualisation en scrollytelling de la flore suisse organisée par altitude et par mois de floraison. Le site se compose de deux vues : un écran d'accueil avec une grille de couleurs (mode aléatoire ou organisée par altitude et mois) et une section d'exploration interactive avec trois paysages SVG illustrés (montagne, plaine, ville). En faisant défiler la page, l'altitude change progressivement et les formes du paysage se colorent avec les teintes des espèces qui fleurissent à ce niveau. Un filtre par mois permet d'affiner la sélection et de découvrir les différences florales entre les saisons. Cliquer sur une forme ou sur une couleur dominante ouvre une fiche détaillée de la fleur correspondante. La page d'accueil contient également une librairie regroupant toutes les fleurs présentes sur le site, permettant aux utilisateurs d’explorer l’ensemble des espèces indépendamment des filtres utilisés dans la partie explorative. 
 
-## Contexte
+## Données et leur manipulation
 
 Les données des espèces de fleurs proviennent d'Info Flora via GBIF (téléchargement d'occurrences filtrées sur la Suisse). Les altitudes minimum et maximum ont été calculées grâce aux longitudes et latitudes des espèces de GBIF et l'aide de l'API de SwissTopo. Les images sont libres de droit et récupérées depuis Wikimedia Commons et iNaturalist. Les couleurs et floraisons viennent de Wikidata et vérifiées à la main. Claude a été utilisé pour la rédaction des descriptions et "fun facts", puis vérifiées à la main.
+
+Avec plus de 5 millions d'entrées et 3'444 espèces, nous avons d'abord filtré les espèces les plus représentées pour n'en garder que 197 en gardant un scope réaliste pour le projet. Nous avons ensuite défini l'altitude minimale et maximale de l'apparition de ces fleurs grâce à un script Python (fourni par Claude AI) et l'aide de l'API SwissTopo pour trouver l'altitude en fonction de la latitude et de la longitude. Pour les mois de floraison, les images et les couleurs principales, nous avons utilisé les bases de données "Wikidata" et "iNaturalist". Ces données ont dû être vérifiées manuellement, car certaines espèces n'avaient pas de couleur attitrée ou des périodes de floraison trop larges.
+
+## Biais et améliorations
+
+Après étude des données, nous avons remarqué que les espèces les plus recensées sont parfois des espèces invasives. En effet, il est plus logique de répertorier les apparitions de ces espèces que celles de fleurs plus communes comme le pissenlit, qui, malgré leur forte présence sur le terrain, restent sous-représentées dans les relevés car elles sont perçues comme banales et donc moins signalées.
 
 ## Planches et prototype
 
@@ -40,5 +46,5 @@ Les données des espèces de fleurs proviennent d'Info Flora via GBIF (télécha
   <li><a href="https://www.swisstopo.admin.ch/">Swiss Topo</a> - Altitudes</li>
   <li><a href="https://www.wikidata.org/">Wikidata</a> - Couleurs et floraisons des espèces, puis vérifiées à la main</li>
   <li><a href="https://www.inaturalist.org/">iNaturalist</a> - Images des fleurs</li>
-  <li><a href="https://www.anthropic.com/claude">Claude (Anthropic)</a> - Rédaction des descriptions et fun facts, vérifiés à la main</li>
+  <li><a href="https://www.anthropic.com/claude">Claude (Anthropic)</a> - Scripts Python et rédaction des descriptions et fun facts, vérifiés à la main</li>
 </ul>
