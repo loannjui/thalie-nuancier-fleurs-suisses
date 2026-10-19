@@ -874,15 +874,11 @@ input[type="range"]::-moz-range-thumb {
   margin: 0;
   font-family: var(--font-body);
   font-size: 0.75rem;
-  color: var(--bg-hero);
+  color: var(--text-secondary);
   background-color: var(--bg-panel);
   a {
     color: var(--text-primary);
   }
-}
-
-.explorer-section ~ .credits {
-  color: var(--text-secondary);
 }
 
 /* ─── MOBILE LANDSCAPE ────────────────────────────────────────── */
