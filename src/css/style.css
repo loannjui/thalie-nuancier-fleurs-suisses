@@ -431,7 +431,7 @@ h2 {
 /* Ligne décorative verticale */
 .altitude-track-line {
   position: absolute;
-  left: 6px;
+  left: 5.5px;
   top: 0;
   bottom: 0;
   width: 1px;
@@ -954,6 +954,10 @@ input[type="range"]::-moz-range-thumb {
   .altitude-dot {
     width: 9px;
     height: 9px;
+  }
+  /* Recentre la ligne sur le point réduit (9px → centre à 4.5px) */
+  .altitude-track-line {
+    left: 4px;
   }
 
   /* Swatches dominantes */
