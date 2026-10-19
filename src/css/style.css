@@ -377,6 +377,10 @@ h2 {
   transform: scale(1.08);
 }
 
+.dominant-swatches .dominant-swatch {
+  cursor: pointer;
+}
+
 .swatches-empty {
   margin: 0;
   text-align: center;
@@ -421,6 +425,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 /* Ligne décorative verticale */
@@ -1113,6 +1118,15 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   gap: 10px;
   margin-bottom: 14px;
+}
+
+.library-color-title .dominant-swatch {
+  width: 24px;
+  height: 24px;
+}
+
+.library-color-title .modal-section-label {
+  margin: 0;
 }
 
 .library-grid {

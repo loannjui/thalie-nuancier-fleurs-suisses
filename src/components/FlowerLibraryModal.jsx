@@ -43,15 +43,15 @@ function FlowerLibraryModal({ isOpen, onClose }) {
       <div className="library-modal" ref={modalRef} onClick={e => e.stopPropagation()}>
 
         <div className="library-header">
-          <span className="panel-title" style={{ fontSize: '1.1rem' }}>Répertoire des fleurs</span>
+          <span className="panel-title">Répertoire des fleurs</span>
         </div>
 
         <div className="library-content">
           {Object.entries(fleursParCouleur).map(([couleur, groupe]) => (
             <section key={couleur} className="library-color-section">
               <div className="library-color-title">
-                <span className="dominant-swatch" style={{ backgroundColor: couleur, width: 24, height: 24, flexShrink: 0 }} />
-                <h3 className="modal-section-label" style={{ margin: 0 }}>{couleur}</h3>
+                <span className="dominant-swatch" style={{ backgroundColor: couleur }} />
+                <h3 className="modal-section-label">{couleur}</h3>
               </div>
               <div className="library-grid">
                 {groupe.map((fleur) => (

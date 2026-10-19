@@ -19,7 +19,6 @@ function AltitudeSlider({ value, onChange }) {
         <div
           className="altitude-track-area"
           onClick={handleClick}
-          style={{ cursor: 'pointer' }}
         >
           <div className="altitude-current-indicator" style={{ top: `${pct}%` }}>
             <span className="altitude-dot" />

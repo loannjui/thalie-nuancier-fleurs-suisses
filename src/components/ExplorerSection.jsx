@@ -12,7 +12,7 @@ import VilleIllustration from '../illustrations/ville.svg?react'
 function ExplorerSection({ onHome }) {
   const [altitude, setAltitude] = useState(3786)
   // const [month, setMonth] = useState(new Date().getMonth() + 1)
-  const [month, setMonth] = useState(4)
+  const [month, setMonth] = useState(5)
   const [selectedFlowers, setSelectedFlowers] = useState([])
   const [shapeToFlower, setShapeToFlower] = useState({})
 
@@ -164,7 +164,7 @@ function ExplorerSection({ onHome }) {
                 <div
                   key={color}
                   className="dominant-swatch"
-                  style={{ backgroundColor: color, cursor: 'pointer' }}
+                  style={{ backgroundColor: color }}
                   onClick={() => {
                     setSelectedFlowers(flowersRef.current.filter(f => f.couleur === color))
                   }}
